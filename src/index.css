@@ -1,0 +1,60 @@
+:root {
+  --primary-color: black;
+  --primary-contrast: white;
+  --text-color: black;
+  --muted-text: black;
+  --page-bg: white;
+  --surface-color: white;
+  --surface-border: black;
+  --input-bg: white;
+  --input-border: black;
+  --input-focus-ring: yellow;
+  --neutral-color: yellow;
+  --weak-color: red;
+  --medium-color: yellow;
+  --strong-color: green;
+  --warning-bg: red;
+  --warning-border: red;
+
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: white;
+    --primary-contrast: black;
+    --text-color: white;
+    --muted-text: white;
+    --page-bg: black;
+    --surface-color: black;
+    --surface-border: white;
+    --input-bg: black;
+    --input-border: white;
+    --input-focus-ring: yellow;
+    --neutral-color: yellow;
+    --weak-color: red;
+    --medium-color: yellow;
+    --strong-color: green;
+    --warning-bg: red;
+    --warning-border: red;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-color);
+  background: var(--page-bg);
+}
+
+button,
+input {
+  font: inherit;
+}

@@ -1,0 +1,236 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 1rem 0;
+}
+
+.password-card {
+  width: min(100%, 740px);
+  margin: 0 auto;
+  background: var(--surface-color);
+  border: 1px solid var(--surface-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  color: var(--muted-text);
+  max-width: none;
+}
+
+.password-input .form-label {
+  margin-bottom: 0.25rem;
+  color: var(--text-color);
+}
+
+.password-input .input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.password-field {
+  flex: 1 1 240px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 0;
+  color: var(--text-color);
+}
+
+.password-field::placeholder {
+  color: var(--muted-text);
+  opacity: 1;
+}
+
+.password-field:focus {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  box-shadow: none;
+  outline: 2px solid var(--input-focus-ring);
+  outline-offset: 1px;
+  color: var(--text-color);
+}
+
+.toggle-button {
+  min-width: 0;
+  font-weight: 400;
+  border-radius: 0;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+  --bs-btn-color: var(--primary-contrast);
+  --bs-btn-hover-bg: var(--primary-contrast);
+  --bs-btn-hover-border-color: var(--primary-contrast );
+  --bs-btn-hover-color: var(--primary-color);
+  --bs-btn-active-bg: var(--primary-color);
+  --bs-btn-active-border-color: var(--primary-color);
+  --bs-btn-active-color: var(--primary-contrast);
+  box-shadow: none;
+}
+
+.strength-panel {
+  margin-top: 1rem;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.strength-badge {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 0;
+}
+
+.strength-progress {
+  height: 0.75rem;
+  border: 1px solid black;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: var(--surface-color);
+}
+
+.strength-progress .progress-bar {
+  transition: none;
+}
+
+.tone-neutral.progress-bar,
+.strength-badge.tone-neutral {
+  background-color: var(--neutral-color);
+  color: black;
+}
+
+.tone-weak.progress-bar,
+.strength-badge.tone-weak {
+  background-color: var(--weak-color);
+  color: white;
+}
+
+.tone-medium.progress-bar,
+.strength-badge.tone-medium {
+  background-color: var(--medium-color);
+  color: black;
+}
+
+.tone-strong.progress-bar,
+.strength-badge.tone-strong {
+  background-color: var(--strong-color);
+  color: black;
+}
+
+.helper-text {
+  margin: 0 0 0.5rem;
+  color: var(--muted-text);
+}
+
+.time-success {
+  color: var(--strong-color);
+  font-weight: 700;
+}
+
+.warning-text {
+  color: var(--weak-color);
+  font-weight: 700;
+}
+
+.warning-alert {
+  margin: 0 0 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0;
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  color: var(--text-color);
+}
+
+.criteria-list {
+  margin-top: 0.5rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.criteria-list .list-group-item {
+  background: var(--input-bg);
+  color: var(--text-color);
+  border: 0;
+  border-top: 1px solid var(--surface-border);
+  padding: 0.5rem 0.65rem;
+}
+
+.criteria-list .list-group-item:first-child {
+  border-top: 0;
+}
+
+.criteria-list .list-group-item.is-met {
+  border-inline-start: 4px solid var(--strong-color);
+}
+
+.criteria-list .list-group-item.is-unmet {
+  border-inline-start: 4px solid var(--weak-color);
+}
+
+.country-flag-validator {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--surface-border);
+}
+
+.country-flag {
+  display: block;
+}
+
+.status-pill {
+  display: inline-block;
+  min-width: 0;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0;
+  border: 1px solid var(--surface-border);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--surface-color);
+}
+
+.status-pill.is-met {
+  border-color: var(--strong-color);
+  color: var(--strong-color);
+}
+
+.status-pill.is-unmet {
+  border-color: var(--weak-color);
+  color: var(--weak-color);
+}
+
+@media (max-width: 575px) {
+  .app-shell {
+    padding: 0.75rem 0;
+  }
+
+  .password-input .input-group > .form-control,
+  .password-input .input-group > .btn {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .strength-panel .d-flex {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}
